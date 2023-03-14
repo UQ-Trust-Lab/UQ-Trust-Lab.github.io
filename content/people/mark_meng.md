@@ -1,11 +1,11 @@
 +++
-title = "My first post"
+title = "Mark H Meng"
 date = 2019-11-27
 
 [extra]
 name = "Mark Huasong Meng"
 group = "alumni"
-image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/PICA.jpg/1200px-PICA.jpg"
+image = "https://mark-h-meng.github.io/attachments/profile-public.jpg"
 page = "https://mark-h-meng.github.io"
-description = "Visitor"
+description = "Visitor, National University of Singapore"
 +++
