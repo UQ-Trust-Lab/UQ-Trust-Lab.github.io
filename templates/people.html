@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section container">
+  <h3 class="title is-3">Group Members</h3>
+  <hr>
+
+  <h4 class="title is-4">Faculty</h4>
+
+  <div class="columns is-flex-wrap-wrap">
+  {% set faculty_count = 0 %}
+  {% for page in section.pages %}
+    {% if page.extra.group == 'faculty' %}
+      {% set_global faculty_count = faculty_count + 1 %}
+    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            <img src="{{ page.extra.image }}" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+        {% if page.extra.page != "" %}
+          <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
+        {% else %}
+          <p class="title is-6"><a href="{{ page.permalink | safe }}">{{ page.extra.name }}</a></p>
+        {% endif %}
+          <p class="subtitle is-6">Associate Professor of The University of Queensland</p>
+        </div>
+      </div>
+    </div>
+      {% if faculty_count % 4 == 0 %}
+  </div>
+  <div class="columns">
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </div>
+
+  <h4 class="title is-4">Student</h4>
+
+  <div class="columns is-flex-wrap-wrap">
+  {% for page in section.pages %}
+    {% if page.extra.group == 'student' %}
+    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
+          </figure>
+        </div>
+        <div class="card-content">
+        {% if page.extra.page != "" %}
+          <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
+        {% else %}
+          <p class="title is-4"><a>{{ page.extra.name }}</a></p>
+        {% endif %}
+          <p class="subtitle is-6">PhD Student</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+  <h4 class="title is-4">Alumni & Collaborators</h4>
+
+  <div class="columns is-flex-wrap-wrap">
+    {% for page in section.pages %}
+      {% if page.extra.group == 'alumni' %}
+      <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
+            </figure>
+          </div>
+          <div class="card-content">
+          {% if page.extra.page != "" %}
+            <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
+          {% else %}
+            <p class="title is-4"><a>{{ page.extra.name }}</a></p>
+          {% endif %}
+            <p class="subtitle is-6">{{ page.extra.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

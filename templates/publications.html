@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section container">
+  <h3 class="title is-3">Publications</h3>
+  <hr>
+
+  {% set map = section.pages | group_by(attribute="year") %}
+  {% set years = [] %}
+  {% for year, ignored in map %}
+    {% set_global years = years | concat(with=year) %}
+  {% endfor %}
+  {% set years = years | sort | reverse %}
+  {% for year in years %}
+    {% if loop.first %}
+  <h4 class="title is-4">{{ year }}</h4>
+    {% else %}
+  <h4 class="title is-4 mt-5">{{ year }}</h4>
+    {% endif %}
+    <ul style="list-style-type:disc">
+    {% set pages = map[year] | sort(attribute="date") | reverse %}
+    {% for page in pages %}
+      {% if loop.first %}
+      <li>
+      {% else %}
+      <li class="mt-3">
+      {% endif %}
+        <p>{{ page.extra.author }}</p>
+        <p><a href="{{ page.extra.pdf }}"><strong>{{ page.title }}</strong></a></p>
+        <p><em>{{ page.extra.target }}</em></p>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock content %}

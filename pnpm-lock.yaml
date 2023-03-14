@@ -1,0 +1,27 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@fortawesome/fontawesome-free': ^6.3.0
+  bulma: ^0.9.4
+  bulma-timeline: ^3.0.5
+
+dependencies:
+  '@fortawesome/fontawesome-free': 6.3.0
+  bulma: 0.9.4
+  bulma-timeline: 3.0.5
+
+packages:
+
+  /@fortawesome/fontawesome-free/6.3.0:
+    resolution: {integrity: sha512-qVtd5i1Cc7cdrqnTWqTObKQHjPWAiRwjUPaXObaeNPcy7+WKxJumGBx66rfSFgK6LNpIasVKkEgW8oyf0tmPLA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /bulma-timeline/3.0.5:
+    resolution: {integrity: sha512-gBwdx7PmAEZ/+5zSn/ZBJBqkenT8wi+9nlD0uP8lXa3rGcbhG+fp8Oz98+3O10LQPlUEdKPYEUxtQ55okRfhTQ==}
+    dev: false
+
+  /bulma/0.9.4:
+    resolution: {integrity: sha512-86FlT5+1GrsgKbPLRRY7cGDg8fsJiP/jzTqXXVqiUZZ2aZT8uemEOHlU1CDU+TxklPEZ11HZNNWclRBBecP4CQ==}
+    dev: false
