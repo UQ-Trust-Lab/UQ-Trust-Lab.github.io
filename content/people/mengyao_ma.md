@@ -5,7 +5,7 @@ date = 2019-11-27
 [extra]
 name = "Mengyao Ma"
 group = "student"
-image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/PICA.jpg/240px-PICA.jpg"
+image = "/profiles/mengyao_ma.webp"
 page = ""
 +++
 
