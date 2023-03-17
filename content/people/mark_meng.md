@@ -7,5 +7,5 @@ name = "Mark Huasong Meng"
 group = "alumni"
 image = "https://mark-h-meng.github.io/attachments/profile-public.jpg"
 page = "https://mark-h-meng.github.io"
-description = "Visitor, National University of Singapore"
+description = "Visitor, NUS"
 +++
