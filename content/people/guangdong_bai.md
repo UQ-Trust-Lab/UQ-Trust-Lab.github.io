@@ -7,4 +7,5 @@ name = "Guangdong Bai"
 group = "faculty"
 image = "/profiles/guangdong_bai.jpg"
 page = "https://baigd.github.io"
+description = "Associate Professor"
 +++

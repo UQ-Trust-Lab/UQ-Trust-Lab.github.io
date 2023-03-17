@@ -22,7 +22,7 @@
         {% else %}
           <p class="title is-6"><a href="{{ page.permalink | safe }}">{{ page.extra.name }}</a></p>
         {% endif %}
-          <p class="subtitle is-6">Associate Professor</p>
+          <p class="subtitle is-6">{{ page.extra.description }}</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
         {% else %}
           <p class="title is-4"><a>{{ page.extra.name }}</a></p>
         {% endif %}
-          <p class="subtitle is-6">PhD Student</p>
+          <p class="subtitle is-6">{{ page.extra.description }}</p>
         </div>
       </div>
     </div>

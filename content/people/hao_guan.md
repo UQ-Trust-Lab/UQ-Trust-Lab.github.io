@@ -7,6 +7,7 @@ name = "Hao Guan"
 group = "student"
 image = "/profiles/hao_guan.webp"
 page = ""
+description = "PhD Student"
 +++
 
 Hello world.
