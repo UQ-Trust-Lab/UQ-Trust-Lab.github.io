@@ -6,11 +6,6 @@ date = 2019-11-27
 name = "Fuman Xie"
 group = "student"
 image = "/profiles/fuman_xie.webp"
-page = ""
+page = "https://xie00059.io""
 description = "PhD Student"
 +++
-
-Hello world.
-
-- people
-- 12345
