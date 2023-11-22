@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a>
+
+      <a class="navbar-item" href="/people/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </span>
+          <span>People</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<section class="section container">
+  <h3 class="title is-3">Projects</h3>
+  <hr>
+
+  <section class="content">
+    <ul>
+      <li>
+        <a href="https://baiqinevaeh.github.io/project-description/" target="_blank">Nudging interpretation and development of privacy policies</a>
+      </li>
+      <li>
+        <a href="https://xie00059.github.io/SE-Projects/" target="_blank">Privacy assessment and enhancement of platforms</a>
+      </li>
+      <li>
+        <a href="https://yanchuan390.github.io/chuan.project.github.io/" target="_blank">Privacy documentation analysis and applications</a>
+      </li>
+      <li>
+        <a href="/projects/mob/" target="_blank">Reliable Model Conversion</a>
+      </li>
+      <li>
+        <a href="https://shanefeng123.github.io/page/" target="_blank">Security and privacy of neural networks in distributed learning</a>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2023 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
