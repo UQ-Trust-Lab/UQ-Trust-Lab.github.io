@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section container">
+  <h3 class="title is-3">Projects</h3>
+  <hr>
+
+  {% for page in section.pages %}
+  <div class="card">
+    <div class="card-content">
+      <div class="columns">
+        <div class="column">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-3"><a href="{{ page.path }}"><strong>{{ page.title }}</strong></a></p>
+              <div class="content">{{ page.summary | safe }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="{{ page.extra.hero }}" alt="{{ page.title }}" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+</section>
+
+{% endblock content %}
