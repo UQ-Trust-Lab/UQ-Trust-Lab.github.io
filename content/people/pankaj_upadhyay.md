@@ -1,12 +1,12 @@
 +++
 title = "My first post"
-date = 2019-11-27
+date = 2018-11-27
 
 [extra]
-name = "Zhongkui Ma"
+name = "Pankaj Upadhyay"
 group = "student"
-image = "/profiles/zhongkui_ma.webp"
-page = "https://zhongkuima.github.io/"
+image = "/profiles/pankaj_upadhyay.webp"
+page = ""
 description = "PhD Student"
 +++
 

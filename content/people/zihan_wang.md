@@ -5,6 +5,6 @@ date = "2019-11-27"
 name = "Zihan Wang"
 group = "student"
 image = "/profiles/zihan_wang.webp"
-page = ""
+page = "https://www.zihan.com.au/"
 description = "PhD Student"
 +++

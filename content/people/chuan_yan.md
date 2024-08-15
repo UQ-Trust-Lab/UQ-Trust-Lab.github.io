@@ -6,7 +6,7 @@ date = 2019-11-27
 name = "Chuan Yan"
 group = "student"
 image = "/profiles/chuan_yan.webp"
-page = ""
+page = "https://yanchuan390.github.io/"
 description = "PhD Student"
 +++
 
