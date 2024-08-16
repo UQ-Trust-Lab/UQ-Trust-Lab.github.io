@@ -29,3 +29,40 @@ $colors: map-merge($colors, $addColors)
   border-radius: 1rem
   padding: 1.5rem 3rem 1.5rem 1.5rem
   background: rgba(0, 0, 0, 0.5)
+
+.block
+  overflow: hidden
+  padding: 0 0 0.5rem 0
+  max-width: 200rem
+  margin: 0 0 1rem 0
+
+  img
+    border-radius: 8px
+    box-shadow: 3px 3px 6px #888
+    margin-top: 5px
+    margin-left: auto  
+    margin-right: auto  
+    width: 230px   
+    height: 123px  
+    object-fit: cover
+    overflow-clip-margin: content-box
+    margin-bottom: 5px
+    float: left
+    margin: 0 1rem 0 0
+    overflow-clip-margin: content-box
+
+  > div
+    padding-left: calc(230px + 1rem)
+  
+  @media (max-width: 768px)
+    .block
+      display: flex
+      flex-direction: column  
+      
+    img
+      float: none  
+      margin: 0 0 0.5rem 0  
+
+    > div
+      padding-left: 0 
+
