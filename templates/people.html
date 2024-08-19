@@ -3,77 +3,91 @@
 {% block content %}
 
 <section class="section container">
-  <h3 class="title is-3">Group Members</h3>
+
+  <h3 class="title is-3">Principal Investigator</h3>
+  <div class="columns is-flex-wrap-wrap">
+    {% for page in section.pages %}
+      {% if page.extra.group == 'faculty' %}
+      <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image px-5 pt-5">
+              <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+          {% if page.extra.page != "" %}
+            <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
+          {% else %}
+            <p class="title is-6"><a href="{{ page.permalink | safe }}">{{ page.extra.name }}</a></p>
+          {% endif %}
+            <p class="subtitle is-6">{{ page.extra.description }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column is-hidden-mobile is-one-third-tablet is-one-quarter-desktop"></div>
+      <div class="column is-hidden-mobile is-one-third-tablet is-one-quarter-desktop"></div>
+      <div class="column is-hidden-mobile is-one-third-tablet is-one-quarter-desktop"></div>
+      
+      {% endif %}
+    {% endfor %}
+  </div>
+
   <hr>
 
+  <h3 class="title is-3">PhD Students</h3>
   <div class="columns is-flex-wrap-wrap">
-  {% for page in section.pages %}
-    {% if page.extra.group == 'faculty' %}
-    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image px-5 pt-5">
-            <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
-          </figure>
-        </div>
-        <div class="card-content">
-        {% if page.extra.page != "" %}
-          <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
-        {% else %}
-          <p class="title is-6"><a href="{{ page.permalink | safe }}">{{ page.extra.name }}</a></p>
-        {% endif %}
-          <p class="subtitle is-6">{{ page.extra.description }}</p>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-  {% endfor %}
-
-  {% for page in section.pages %}
-    {% if page.extra.group == 'student' %}
-    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image px-5 pt-5">
-            <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
-          </figure>
-        </div>
-        <div class="card-content">
-        {% if page.extra.page != "" %}
-          <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
-        {% else %}
-          <p class="title is-4"><a>{{ page.extra.name }}</a></p>
-        {% endif %}
-          <p class="subtitle is-6">{{ page.extra.description }}</p>
+    {% for page in section.pages %}
+      {% if page.extra.group == 'student' %}
+      <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image px-5 pt-5">
+              <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+          {% if page.extra.page != "" %}
+            <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
+          {% else %}
+            <p class="title is-4"><a>{{ page.extra.name }}</a></p>
+          {% endif %}
+            <p class="subtitle is-6">{{ page.extra.description }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    {% endif %}
-  {% endfor %}
-
-  {% for page in section.pages %}
-    {% if page.extra.group == 'alumni' %}
-    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image px-5 pt-5">
-            <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
-          </figure>
-        </div>
-        <div class="card-content">
-      {% if page.extra.page != "" %}
-          <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
-      {% else %}
-          <p class="title is-4"><a>{{ page.extra.name }}</a></p>
       {% endif %}
-          <p class="subtitle is-6">{{ page.extra.description }}</p>
+    {% endfor %}
+  </div>
+
+  <hr>
+
+  <h3 class="title is-3">Alumni</h3>
+  <div class="columns is-flex-wrap-wrap">
+    {% for page in section.pages %}
+      {% if page.extra.group == 'alumni' %}
+      <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image px-5 pt-5">
+              <img src="{{ page.extra.image }}" alt="{{ page.extra.name }}">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+          {% if page.extra.page != "" %}
+            <p class="title is-4"><a href="{{ page.extra.page }}" target="_blank">{{ page.extra.name }}</a></p>
+          {% else %}
+            <p class="title is-4"><a>{{ page.extra.name }}</a></p>
+          {% endif %}
+            <p class="subtitle is-6">{{ page.extra.description }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    {% endif %}
-  {% endfor %}
-
+      {% endif %}
+    {% endfor %}
   </div>
+
 </section>
 
 {% endblock content %}
