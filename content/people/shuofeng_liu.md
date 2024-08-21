@@ -5,6 +5,6 @@ date = "2019-11-27"
 name = "Shuofeng Liu"
 group = "student"
 image = "/profiles/shuofeng_liu.webp"
-page = ""
+page = "https://shuofeng-uq.github.io/"
 description = "PhD Student"
 +++
