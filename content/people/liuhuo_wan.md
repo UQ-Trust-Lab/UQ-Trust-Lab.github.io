@@ -6,7 +6,7 @@ date = 2019-11-27
 name = "Liuhuo Wan"
 group = "student"
 image = "/profiles/liuhuo_wan.webp"
-page = ""
+page = "https://cosunshine.github.io/"
 description = "PhD Student"
 +++
 
