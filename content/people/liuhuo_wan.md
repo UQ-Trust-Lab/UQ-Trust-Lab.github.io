@@ -5,7 +5,7 @@ date = 2019-11-27
 [extra]
 name = "Liuhuo Wan"
 group = "student"
-image = "https://cosunshine.github.io/images/profile.jpg"
+image = "/profiles/liuhuo.jpg"
 page = "https://cosunshine.github.io/"
 description = "PhD Student"
 +++
