@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/timeline.css">
+
+<section class="section timeline">
+  {% set map = section.pages | group_by(attribute="year") %}
+  {% set years = [] %}
+  {% for year, ignored in map %}
+    {% set_global years = years | concat(with=year) %}
+  {% endfor %}
+  {% set years = years | sort | reverse %}
+  {% for year in years %}
+  <div class="container">
+    <header class="timeline-header">
+      <span class="tag is-medium is-uq-light">{{ year }}</span>
+    </header>
+    {% set pages = map[year] | sort(attribute="date") | reverse %}
+    {% for page in pages %}
+    <div class="timeline-item">
+      <div class="timeline-marker is-icon">
+        {% if page.extra.category == "paper" %}
+        <i class="fa-solid fa-book-open"></i>
+        {% elif page.extra.category == "other" %}
+        <i class="fa-solid fa-newspaper"></i>
+        {% endif %}
+      </div>
+      <div class="timeline-content">
+        <p class="heading">{{ page.date }}</p>
+        <p><strong>{{ page.title }}</strong></p>
+      </div>
+    </div>
+    {% endfor %}
+  {% endfor %}
+</div>
+</section>
+
+{% endblock content %}

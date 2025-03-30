@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero is-halfheight is-uq">
+  <div class="hero-body court">
+    <div class="court-text">
+      <h1 class="title">
+        TrustLab
+      </h1>
+      <h2 class="subtitle">
+        Discipline of Cyber Security and Software Engineering, <br>
+        School of Information Technology and Electrical Engineering, <br>
+        The University of Queensland
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <h4 class="title is-4 my-2">About us</h4>
+      <p>TrustLab is a research team based at the Discipline of Cyber Security and Software Engineering (CSS), the School of Information Technology and Electrical Engineering (ITEE),
+        The University of Queensland in Australia.
+        TrustLab's primary objective is to develop theories, techniques, and systems that can ensure the trustworthiness of complex software and intelligence systems.
+        It strives to enhance security, robustness and reliability of software and intelligence systems, and make them more trustworthy for the individuals and organizations that rely on them.</p>
+    </div>
+    <div class="column is-4">
+      <div class="panel is-uq-light">
+        <p class="panel-heading">
+          Latest News
+        </p>
+        {% set section = get_section(path="news/_index.md") %}
+        {% set pages = section.pages | sort(attribute="date") | reverse %}
+        {% for page in pages %}
+          {% if loop.index > 2 %} {% break %} {% endif %}
+        <a class="panel-block">
+          <span class="panel-icon">
+          {% if page.extra.category == "paper" %}
+            <i class="fa-solid fa-book-open"></i>
+          {% elif page.extra.category == "other" %}
+            <i class="fa-solid fa-newspaper"></i>
+          {% endif %}
+          </span>
+          {{ page.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

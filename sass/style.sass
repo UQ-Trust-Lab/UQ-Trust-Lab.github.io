@@ -1,0 +1,68 @@
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass"
+
+$uq-purple: #51247a
+$uq-purple-light: #962a8b
+
+$neutral: #d7d1cc
+$neutral-80: #dfdad6
+$neutral-60: #e7e3e0
+$neutral-40: #f0eceb
+$neutral-20: #f7f6f5
+
+$addColors: ("uq": ($uq-purple, $neutral-60), "uq-light": ($uq-purple-light, $neutral-20))
+$colors: map-merge($colors, $addColors)
+
+@import "../node_modules/bulma/bulma.sass"
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss"
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss"
+
+@mixin phone-width
+  @media screen and (max-width: 1023px)
+    @content
+
+.court
+  background: url('/court.webp')
+  background-size: cover
+  background-repeat: no-repeat
+
+.court-text
+  border-radius: 1rem
+  padding: 1.5rem 3rem 1.5rem 1.5rem
+  background: rgba(0, 0, 0, 0.5)
+
+.block
+  overflow: hidden
+  padding: 0 0 0.5rem 0
+  max-width: 200rem
+  margin: 0 0 1rem 0
+
+  img
+    border-radius: 8px
+    box-shadow: 3px 3px 6px #888
+    margin-top: 5px
+    margin-left: auto  
+    margin-right: auto  
+    width: 230px   
+    height: 123px  
+    object-fit: cover
+    overflow-clip-margin: content-box
+    margin-bottom: 5px
+    float: left
+    margin: 0 1rem 0 0
+    overflow-clip-margin: content-box
+
+  > div
+    padding-left: calc(230px + 1rem)
+  
+  @media (max-width: 768px)
+    .block
+      display: flex
+      flex-direction: column  
+      
+    img
+      float: none  
+      margin: 0 0 0.5rem 0  
+
+    > div
+      padding-left: 0 
+

@@ -1,0 +1,22 @@
+name: Zola on GitHub Pages
+
+on:
+ push:
+  branches:
+   - master
+
+jobs:
+  build:
+    name: Publish site
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v3.4.0
+      - name: Install dependencies
+        run: npm install
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.17.1
+        env:
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}

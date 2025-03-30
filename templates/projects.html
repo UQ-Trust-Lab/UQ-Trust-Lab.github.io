@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<section class="section container">
+  <!-- <h1 class="title is-3" style="text-align: left; font-size: 2.5em;">TrustLab Projects (SEC4AI, AI4SEC)</h1> -->
+  <h1 class="title is-3" style="text-align: left; font-size: 2.5em;">
+    TrustLab Projects (<span style="color: #b44695;">Security4AI</span>, <span style="color: #4682B4;">AI4Security</span>)
+  </h1>
+  <div style="text-align: center; margin-top: -3em; margin-bottom: -3em;">
+  <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/trustlab.svg" alt=""  width="100%">
+  </div>
+  <br><br>
+  <!-- <p style="background-color: #E6E6FA; padding: 10px;">
+    Hi ALL, <br>
+    <br>
+    Below are the projects from our TrustLab. Following Prof. Bai's guidance, we aim to systematically categorize these projects into groups and clearly visualize them on this page (the placeholder image will be the blue map). You can click on each subgroup to view detailed content and corresponding publications.
+    <br>
+    <br>
+    <b>PLEASE submit a cover image for your publication.</b>
+    <br>
+    <br>
+    <b>We also need to discuss how to organize these projects, as they are currently arranged somewhat randomly. Additionally, please let me know if any projects are missing—we publish FREQUENTLY, so it’s easy to overlook something!</b>
+    <br>
+    <br>
+    <b>We would like to extend our thanks to <u>Chi Wang</u> and Hao Guan for their contribution.</b>
+    <br>
+    <br>
+    Thanks,
+    <br>
+    Zihan
+    </p>     -->
+  <a href="/projects/project1/" style="font-size: 1.5em; font-weight: bold; color: #b44695;">Trustworthy and Responsible AI
+  </a>
+  <br>
+  <p>Trustworthy and Responsible AI is about building AI systems that operate reliably and ethically, aligning with societal values and expectations. Ensuring that these systems behave as expected under various conditions is essential to minimize the risk of unintended outcomes. Equally important is controlling how AI models are used, ensuring they adhere to specific guidelines and are not misapplied. Moreover, it's crucial to maintain a clear focus on the intended purposes of these models, preventing their use in ways that could lead to ethical or legal concerns. By integrating these principles, AI systems can be developed and deployed in a manner that is both reliable and responsible.
+  </p>
+  <br>
+
+  <a href="/projects/project2/" style="font-size: 1.5em; font-weight: bold; color: #b44695;">Privacy-preserving Machine Learning</a>
+  <br>
+  <p>Privacy-preserving machine learning addresses the critical need to protect sensitive data in machine learning applications. As models are increasingly deployed in sensitive areas like healthcare and finance, threats such as membership inference, where an attacker can determine if specific data was used in training, and gradient inversion attacks, which can reconstruct input data from model gradients, pose serious risks. Additionally, model extraction attacks can replicate a model's functionality, compromising both data privacy and intellectual property. Privacy-preserving techniques aim to mitigate these risks, ensuring that the benefits of machine learning are realized without sacrificing privacy.
+  </p>
+  <br>
+
+  <a href="/projects/project3/" style="font-size: 1.5em; font-weight: bold; color: #4682B4;">Security and Privacy Compliance</a>
+  <!-- <blockquote style="font-size: 1em; color: gray;">
+    VPA privacy evaluation, User-Centric Privacy Explanations, Android OS-level Safeguards.
+  </blockquote> -->
+  <br>
+  <p>As data protection laws such as GDPR and CCPA become increasingly complex and stringent, privacy compliance has become a core challenge across many industries, particularly in sectors that handle large volumes of personal data. Consequently, ensuring that applications meet regulatory requirements while safeguarding user privacy has emerged as a significant issue. TrustLab has conducted in-depth explorations of both the traditional Android domain and the emerging VPA market, analyzing the quality of official privacy documents, such as privacy policies and privacy change lists, and extracting relevant entities. Additionally, we conducted systematic testing and evaluation of applications' functionality and data collection practices during real-world operation. Our findings provide concrete guidance and practical insights for optimizing privacy compliance.
+  </p>
+  <br>
+
+  <a href="/projects/project4/" style="font-size: 1.5em; font-weight: bold; color: #4682B4;">AI for Software Engineering</a>
+  <br>
+  <p>TrustLab has conducted in-depth and systematic research primarily on Web-based collaboration platforms, Deep Learning libraries, and the emerging third-party applications integrated with LLMs. Our rigorous defect testing has particularly focused on these platforms' performance in complex scenarios such as permission invocation, memory consumption, computational errors, data transmission, and secure API calls. Our research not only uncovers high-risk vulnerabilities hidden within these systems but also provides specific recommendations for improvement. These insights serve as valuable guidance for developers and engineers, helping them optimize system design and enhance software security and robustness.
+  </p>
+  <br>
+</section>
+
+{% endblock content %}
+
