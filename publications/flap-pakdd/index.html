@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a> -->
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<section class="section">
+  <h1 class="title">
+    Enhancing Federated Learning Robustness using Data-Agnostic Model Pruning
+  </h1>
+  <p class="subtitle"><strong>2023-05-27</strong></p>
+
+  <div class="container">
+    
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

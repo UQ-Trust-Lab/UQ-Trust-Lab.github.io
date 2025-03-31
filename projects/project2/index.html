@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a> -->
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<section class="section container">
+  <h2 class="title is-3">Privacy-preserving Machine Learning
+  </h2>
+  <hr>
+
+  <section class="content">
+    <ul style="list-style: none;">
+      <li>
+        <div class="block">
+          <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/grab_ccs.webp" alt="">
+          <div>
+            <!-- TODO:Link -->
+            <a href="#" target="_blank">Uncovering Gradient Inversion Risks in Practical Language Model Training</a>
+            <p>Xinguo Feng, Zhongkui Ma, Zihan Wang, Chegne Eu Joe, Mengyao Ma, Alsharif Abuadbba, Guangdong Bai.<br>ACM CCS 2024</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="block">
+          <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/moex_cikm.webp" alt="">
+          <div>
+            <!-- TODO:Link -->
+            <a href="#" target="_blank">Unveiling Intellectual Property Vulnerabilities of GAN-Based Distributed Machine Learning through Model Extraction Attacks</a>
+            <p>Mengyao Ma, Shuofeng Liu, Pathum Chamikara Mahawaga Arachchige, Mohan Baruwal Chhetri, Guangdong Bai.<br>CIKM 2024</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="block">
+          <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/yao_asiaccs.webp" alt="">
+          <div>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3579856.3590334?casa_token=g5VYZCvSSe4AAAAA:wMvw6q-FCsAI3u2eq_7EQirKZN3ahvu0zC1tRrgIt3SG8wv1ZDa8BnwMNJ_eEMai20-oOke_5Bru" target="_blank">LoDen: Making Every Client in Federated Learning a Defender Against the Poisoning Membership Inference Attacks</a>
+            <p>Mengyao Ma, Yanjun Zhang, Leo Yu Zhang, Pathum Chamikara Mahawaga Arachchige, Mohan Baruwal Chhetri, Guangdong Bai.<br>ASIACCS 2023</p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+  
+  
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

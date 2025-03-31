@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a> -->
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<section class="section container">
+  <h2 class="title is-3">Privacy Compliance</h2>
+  <hr>
+    <section class="content">
+      <ul style="list-style: none;">
+        <li>
+          <div class="block">
+            <img src="https://yanchuan390.github.io/assets/images/covers/fse'24.jpg" alt="">
+            <div>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3660826" target="_blank">Investigating Documented Privacy Changes in Android OS</a>
+              <p>Chuan Yan, Mark Huasong Meng, Fuman Xie, Guangdong Bai.<br>FSE 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/pico.webp" alt="">
+            <div>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3597503.3639107?casa_token=6aU9kdv3_jgAAAAA:LKju8DDa175cPD7u1nmdJu-oha_6Aqw0ljGJoBTkD7xsf4CEf52PSC9NHye9YTgHOSEbPETqUqCC" target="_blank">Are Your Requests Your True Needs? Checking Excessive Data Collection in VPA Apps</a>
+              <p>Fuman Xie, Chuan Yan, Mark Huasong Meng, Shaoming Teng, Yanjun Zhang, Guangdong Bai.<br>ICSE 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://yanchuan390.github.io/assets/images/covers/pets'24.jpg" alt="">
+            <div>
+              <!-- TODO:link -->
+              <a href="#" target="_blank">On the Quality of Privacy Policy Documents of Virtual Personal Assistant Applications</a>
+              <p>Chuan Yan, Fuman Xie, Mark Huasong Meng, Yanjun Zhang, Guangdong Bai.<br>PETS 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://mark-h-meng.github.io/projects/u2i2-cover.png" alt="">
+            <div>
+              <a href="https://baigd.github.io/files/NDSS23-U2I2.pdf" target="_blank">Post-GDPR Threat Hunting on Android Phones: Dissecting OS-level Safeguards of User-unresettable Identifiers</a>
+              <p>Mark Huasong Meng, Qing Zhang, Guangshuai Xia, Yuwei Zheng, Yanjun Zhang, Guangdong Bai, Zhi Liu, Sin Gee Teo, Jin Song Dong.<br>NDSS 2023</p>
+            </div>
+          </div>
+        </li> 
+  
+        <li>
+          <div class="block">
+            <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/baiqi_asiaccs.webp" alt="">
+            <div>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3579856.3590335?casa_token=UT_bpXpKq9UAAAAA:_4_NvGoSuOp7kIc3UON6ihVP3vL33xN3TnLuV4NOm7c3nE018jzH9g5PqWHdZda5vgvKX6UJMeRL" target="_blank">Investigating Users' Understanding of Privacy Policies of Virtual Personal Assistant Applications</a>
+              <p>Baiqi Chen, Tingmin Wu, Yanjun Zhang, Mohan Baruwal Chhetri, Guangdong Bai.<br>ASIACCS 2023</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/SKIPPER.webp" alt="">
+            <div>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3551349.3560416?casa_token=M-kKKF46GTYAAAAA:r_QnyKeQ8Lgrpy1lqzJV1NRGz8lrkuauOXwF_GKxy1cEyis3NYzcJY_vljEnM9Xt5pZJ6iAMCxfK" target="_blank">Scrutinizing Privacy Policy Compliance of Virtual Personal Assistant Apps</a>
+              <p>Fuman Xie, Yanjun Zhang, Chuan Yan, Suwan Li, Lei Bu, Kai Chen, Zi Huang, Guangdong Bai.<br>ASE 2022</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a> -->
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<section class="section container">
+  <h2 class="title is-3">Trustworthy and Responsible AI
+  </h2>
+  <hr>
+    <section class="content">
+      <ul style="list-style: none;">
+        <li>
+          <div class="block">
+            <img src="https://www.zihan.com.au/assets/img/sp_cover.png" alt="">
+            <div>
+              <a href="https://www.zihan.com.au/assets/files/SP24CoreLocker.pdf" target="_blank">CoreLocker: Neuron-level Usage Control</a>
+              <p>Zihan Wang, Zhongkui Ma, Xinguo Feng, Ruoxi Sun, Hu Wang, Minhui Xue, Guangdong Bai.<br>IEEE S&P 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://www.zihan.com.au/assets/img/usenix24.png" alt="">
+            <div>
+              <a href="https://www.usenix.org/system/files/sec24fall-prepub-2516-liu-shuofeng.pdf" target="_blank">Being Transparent is Merely the Beginning: Enforcing Purpose Limitation with Polynomial Approximation</a>
+              <p>Shuofeng Liu, Zihan Wang, Minhui Xue, Long Wang, Yuanchao Zhang, Guangdong Bai.<br>USENIX Security 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/kui_relu.png" alt="">
+            <div>
+              <a href="https://baigd.github.io/files/WraLU-POPL24.pdf" target="_blank">ReLU Hull Approximation</a>
+              <p>Zhongkui Ma, Jiaying Li, Guangdong Bai.<br>POPL 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="block">
+            <img src="https://raw.githubusercontent.com/UQ-Trust-Lab/UQ-Trust-Lab.github.io/master/static/covers/mark_pakdd.jpg" alt="">
+            <div>
+              <a href="https://mark-h-meng.github.io/publications/attachments/meng2023enhancing.pdf" target="_blank">Enhancing Federated Learning Robustness using Data-Agnostic Model Pruning</a>
+              <p>Mark Huasong Meng, Sin Gee Teo, Guangdong Bai, Kailong Wang, Jin Song Dong.<br>PAKDD 2023</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
