@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a> -->
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<link rel="stylesheet" href="/page.css">
+
+<section class="section content">
+  <div class="container">
+    <h1>
+      Reliable Model Conversion
+    </h1>
+
+    <h2 id="background">
+      Background
+    </h2>
+
+    <p>As machine learning technology becomes increasingly prevalent, its applications have broadened from high-performance servers to encompass mobile and embedded devices.
+Given the resource limitations inherent in these smaller devices, machine learning models frequently require conversion before deployment.</p>
+<p>Prominent machine learning frameworks such as PyTorch and TensorFlow offer tools to facilitate this process.
+However, the complexity of the models can lead to errors during optimization, potentially impeding successful deployment.</p>
+<p>Although machine learning bugs on training and inference have been studied extensively, the characteristics of model conversion bugs have not been explored in detail.</p>
+<span id="continue-reading"></span>
+<p><img src="/ICSE2023_MOB_Hao_Preview.jpg" alt="landscape" /></p>
+<h2 id="empirical-study-on-model-optimization-bugs">Empirical Study on Model Optimization Bugs</h2>
+<p>After the model training, some optimization techniques like pruning and quantization can enhance the size efficiency and speed of models, which is a common part of model conversion.
+However, these optimization techniques make significant changes to the model and may introduce bugs.
+These issues are collectively termed as Model Optimization Bugs (MOBs).</p>
+<p>In our study, we present the first comprehensive categorization and analysis of MOBs.
+We collect a dataset of 371 MOBs from the PyTorch and TensorFlow repositories and conduct a comprehensive study on the bugs.
+We have identified four symptom categories and five root causes.</p>
+<p>With the analysis on the root causes and the existing bug detection techniques, we have summarized five challenges in the detection of MOBs.
+Based on our insights, we propose actionable recommendations for framework developers and end-users to mitigate these challenges effectively.</p>
+<p><img src="/ICSE2023_MOB_Hao_Method.png" alt="portrait" /></p>
+<h2 id="paper">Paper</h2>
+<ul>
+<li>Hao Guan, Ying Xiao, Jiaying Li, Yepang Liu, Guangdong Bai, <strong>A Comprehensive Study of Real-World Bugs in Machine Learning Model Optimization</strong>,
+<em>The International Conference on Software Engineering (ICSE) , 2023</em>.</li>
+</ul>
+
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

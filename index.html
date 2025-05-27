@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLab@UQ CSS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-uq" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      TrustLab@UQ CSS
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- <a class="navbar-item" href="/news/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-calendar-day"></i>
+          </span>
+          <span>News</span>
+      </a> -->
+
+      <a class="navbar-item" href="/publications/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </span>
+          <span>Publications</span>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="/projects/">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+          <span>Projects</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+    });
+  </script>
+</nav>
+
+
+  
+
+<section class="hero is-halfheight is-uq">
+  <div class="hero-body court">
+    <div class="court-text">
+      <h1 class="title">
+        TrustLab
+      </h1>
+      <h2 class="subtitle">
+        Discipline of Cyber Security and Software Engineering, <br>
+        School of Information Technology and Electrical Engineering, <br>
+        The University of Queensland
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <h4 class="title is-4 my-2">About us</h4>
+      <p>TrustLab is a research team based at the Discipline of Cyber Security and Software Engineering (CSS), the School of Information Technology and Electrical Engineering (ITEE),
+        The University of Queensland in Australia.
+        TrustLab's primary objective is to develop theories, techniques, and systems that can ensure the trustworthiness of complex software and intelligence systems.
+        It strives to enhance security, robustness and reliability of software and intelligence systems, and make them more trustworthy for the individuals and organizations that rely on them.</p>
+    </div>
+    <!-- <div class="column is-4">
+      <div class="panel is-uq-light">
+        <p class="panel-heading">
+          Latest News
+        </p>
+        
+        
+        
+          
+        <a class="panel-block">
+          <span class="panel-icon">
+          
+            <i class="fa-solid fa-book-open"></i>
+          
+          </span>
+          Three papers on trustworthy AI, semantics-aware cookie analysis, and AI-backed app security are accepted by WWW 2025.
+        </a>
+        
+          
+        <a class="panel-block">
+          <span class="panel-icon">
+          
+            <i class="fa-solid fa-book-open"></i>
+          
+          </span>
+          Our paper on multi-window information leakage on mobile devices is accepted by MobiCom’25.
+        </a>
+        
+           
+      </div>
+    </div> -->
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 TrustLab@Discipline of Cyber Security and Software Engineering, School of Information Technology and Electrical Engineering, The University of Queensland
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
